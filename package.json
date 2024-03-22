@@ -7,20 +7,20 @@
   "scripts": {
     "build": "rimraf dist && npx tsc",
     "start": "node dist/server.js",
-    "watch": "tsc -w",
-    "dev": "nodemon dist/server.js"
+    "serve": "concurrently \"npx tsc -w\" \"nodemon dist/server.js\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "typescript": "^5.4.3",
     "@types/express": "^4.17.21",
     "@types/node": "^20.11.30",
+    "concurrently": "^8.2.2",
     "express": "^4.19.1",
     "rimraf": "^5.0.5"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0",
-    "typescript": "^5.4.3"
+    "nodemon": "^3.1.0"
   }
 }
